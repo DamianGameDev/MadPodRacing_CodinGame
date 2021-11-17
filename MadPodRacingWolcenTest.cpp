@@ -33,6 +33,22 @@ int main()
         // You have to output the target position
         // followed by the power (0 <= thrust <= 100)
         // i.e.: "x y thrust"
-        cout << next_checkpoint_x << " " << next_checkpoint_y << " 80" << endl;
+
+        int thrust = 100;
+        if (next_checkpoint_dist > 700 && next_checkpoint_dist <= 900)
+        {
+            thrust = 30;
+        }
+        else if ((next_checkpoint_angle > 60 || next_checkpoint_angle < -60) && next_checkpoint_dist > 1500)
+        {
+            thrust = 10;
+        }
+        else
+        {
+            thrust = 100;
+        }
+
+        cout << next_checkpoint_x << " " << next_checkpoint_y << " " << thrust << endl;
+        cerr << next_checkpoint_dist << " " << next_checkpoint_angle << endl;
     }
 }
