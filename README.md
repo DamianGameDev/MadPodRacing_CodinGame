@@ -47,11 +47,11 @@ Repository to show progress of the test on codingame rankings
 * And finally made that everything was possible and scalable with more than one pod
 * For this part I think I spent maybe a bit more than 15 Hours so I decided to just leave both my pods working individually as it was working before getting the new pod
 
-[SPENT 2 - 3 HOURS REFACTORING CODE SO IT WORKED WIT > 1 POD]
+[SPENT 2 - 3 HOURS REFACTORING CODE SO IT WORKED WITH > 1 POD]
 
 * The only problem I found here was that now the Angle given to me was not the angle of my pod relative to the checkpoint, instead it was the world rotation of my pod, which didn't helped me much so I had to find the relative angle for my thrust multiplier to work right, to do this I had to normalize the position of the pod and the nex checkpoint, getting the dot product and using the atan2 to get my angle (it was on radians so I had to convert the value to degrees) and finally depending on the world angle of the Pod add 360 to the final angle, there was a big problem here with this angle so i had to add 3 degrees more to the difference
 
-[SPENT 2 HOURS REVIEWING AND IMPLEMENTING SOME TRIGONOMETRIC FUNCTIONS/EQUATIONS TO GET THE ANGLE RIGHT]
+[SPENT 2 HOURS GOING OVER AND IMPLEMENTING SOME TRIGONOMETRIC FUNCTIONS/EQUATIONS TO GET THE ANGLE RIGHT]
 
 ### Possible thoughts and Improvement Possibilities
 * It would have been better if I had used the UnitDirectionVector instead of the angle on that last problem I had
